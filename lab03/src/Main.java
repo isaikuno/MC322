@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.Scanner;
+import java.text.SimpleDateFormat;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -9,11 +10,27 @@ public class Main {
         Veiculo veiculo2 = new Veiculo("BBB2222", "Ford", "C22", 2006);
         Veiculo veiculo3 = new Veiculo("CCC3333", "Ford", "C23", 2007);
 
-        Date data = new Date();
+        SimpleDateFormat formatadata = new SimpleDateFormat("dd/MM/yyyy");
+        Date data1 = new Date();
+        Date data2 = new Date();
+        Date data3 = new Date();
+        Date data4 = new Date();
+        Date data5 = new Date();
+        Date data6 = new Date();
 
-        ClientePJ clientePJ1 = new ClientePJ("Jozerbaldo", "Rua Cassio", data, "Ens superior", "masc", "C", "37.514.580.0001-45", data);
-        ClientePF clientePF1 = new ClientePF("Claudete", "Rua Moraes", data, "Pos", "fem", "A", "280.012.38938", data);
-        ClientePF clientePF2 = new ClientePF("Totoro", "Rua Chimarrao", data, "Ens superior", "masc", "B", "123.456.759-09", data);
+        data1 = formatadata.parse("15/01/2012");
+        data2 = formatadata.parse("14/02/2001");
+        data3 = formatadata.parse("11/01/2013");
+        data4 = formatadata.parse("15/06/2000");
+        data5 = formatadata.parse("25/07/2014");
+        data6 = formatadata.parse("11/09/1999");
+
+
+
+
+        ClientePJ clientePJ1 = new ClientePJ("Jozerbaldo", "Rua Cassio", data1, "Ens superior", "masc", "C", "37.514.580.0001-45", data2);
+        ClientePF clientePF1 = new ClientePF("Claudete", "Rua Moraes", data3, "Pos", "fem", "A", "280.012.38938", data4);
+        ClientePF clientePF2 = new ClientePF("Totoro", "Rua Chimarrao", data5, "Ens superior", "masc", "B", "123.456.759-09", data6);
 
         //instanciando uma serguradora
         Seguradora seguradora1 = new Seguradora("MaisSeguro", "(44)91838-3421", "Mais@gmail.com", "Rua Comendador");
